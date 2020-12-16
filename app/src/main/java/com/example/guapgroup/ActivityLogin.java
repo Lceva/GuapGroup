@@ -84,7 +84,7 @@ public class ActivityLogin extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                Intent intent = new Intent(ActivityLogin.this, MainActivity.class);
+                                Intent intent = new Intent(ActivityLogin.this, ActivityTimetable.class);
                                 startActivity(intent);
 
                                 //finish();

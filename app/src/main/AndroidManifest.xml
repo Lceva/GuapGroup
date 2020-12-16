@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GuapGroup">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ActivityTimetable"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
