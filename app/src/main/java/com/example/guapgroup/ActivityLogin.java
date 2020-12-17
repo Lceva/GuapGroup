@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -73,26 +74,26 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 if (TextUtils.isEmpty(email.getText().toString())) {
-                    Snackbar.make(root, "Введите почту", Snackbar.LENGTH_SHORT).show();
+
+                    Toast.makeText(ActivityLogin.this,"Ведите почту",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (password.getText().toString().length() < 5) {
-                    Snackbar.make(root, "Введите корректный пароль", Snackbar.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityLogin.this,"Ведите коректный пороль",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 auth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                Intent intent = new Intent(ActivityLogin.this, ActivityTimetable.class);
+                                Intent intent = new Intent(ActivityLogin.this, MainActivity.class);
                                 startActivity(intent);
-
                                 //finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Snackbar.make(root, "Ошибка авторизации", Snackbar.LENGTH_SHORT).show();
+                        Toast.makeText(ActivityLogin.this,"Ошиибка авторизации",Toast.LENGTH_SHORT).show();
                     }
                 });
             }
