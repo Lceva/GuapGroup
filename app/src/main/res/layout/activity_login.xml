@@ -34,6 +34,7 @@
             android:layout_height="64dp"
             android:fontFamily="@font/comfortaa_bold"
             android:text="@string/sign_in"
+            android:textColor="@android:color/white"
             android:translationX="110dp"
             android:translationY="300dp"
             android:backgroundTint="@color/button_bgr"

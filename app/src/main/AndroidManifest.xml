@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GuapGroup">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".ActivityLogin">
+        <activity android:name=".ActivityProfile"></activity>
+        <activity android:name=".ActivityNews" />
+        <activity android:name=".ActivityTimetable" />
+        <activity
+            android:name=".ActivityLogin"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
