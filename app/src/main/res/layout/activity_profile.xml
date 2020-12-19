@@ -38,7 +38,6 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="131dp"
             android:layout_height="match_parent"
-            android:onClick="onClickProfile"
             android:text="@string/profile" />
     </LinearLayout>
 

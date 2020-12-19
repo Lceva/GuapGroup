@@ -17,18 +17,12 @@ public class ActivityProfile extends AppCompatActivity {
     public void onClicktimetable(View view) {
         Intent intent = new Intent(ActivityProfile.this, ActivityTimetable.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 
     public void onClickNews(View view) {
         Intent intent = new Intent(ActivityProfile.this, ActivityNews.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-    }
-
-    public void onClickProfile(View view) {
-        Intent intent = new Intent(ActivityProfile.this, ActivityProfile.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 }

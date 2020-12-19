@@ -22,7 +22,6 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="139dp"
             android:layout_height="match_parent"
-            android:onClick="onClickNews"
             android:text="@string/news" />
 
         <Button

@@ -13,21 +13,16 @@ public class ActivityNews extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
     }
+
     public void onClicktimetable(View view) {
         Intent intent = new Intent(ActivityNews.this, ActivityTimetable.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-    }
-
-    public void onClickNews(View view) {
-        Intent intent = new Intent(ActivityNews.this, ActivityNews.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
     }
 
     public void onClickProfile(View view) {
         Intent intent = new Intent(ActivityNews.this, ActivityProfile.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
     }
 }

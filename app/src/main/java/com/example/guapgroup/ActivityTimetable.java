@@ -14,21 +14,15 @@ public class ActivityTimetable extends AppCompatActivity {
         setContentView(R.layout.activity_timetable);
     }
 
-    public void onClicktimetable(View view) {
-        Intent intent = new Intent(ActivityTimetable.this, ActivityTimetable.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-    }
-
     public void onClickNews(View view) {
         Intent intent = new Intent(ActivityTimetable.this, ActivityNews.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 
     public void onClickProfile(View view) {
         Intent intent = new Intent(ActivityTimetable.this, ActivityProfile.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
     }
 }
