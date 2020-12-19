@@ -6,4 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".ActivityProfile">
 
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_news"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:onClick="onClickNews"
+            android:text="@string/news" />
+
+        <Button
+            android:id="@+id/timetable"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:onClick="onClicktimetable"
+            android:text="@string/timetable" />
+
+        <Button
+            android:id="@+id/btn_profil"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="131dp"
+            android:layout_height="match_parent"
+            android:onClick="onClickProfile"
+            android:text="@string/profile" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_timetable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

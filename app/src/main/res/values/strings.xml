@@ -3,4 +3,7 @@
     <string name="sign_in">Войти</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="news">Новости</string>
+    <string name="timetable">Расписание</string>
+    <string name="profile">Профиль</string>
 </resources>
