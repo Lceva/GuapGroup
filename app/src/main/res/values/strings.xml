@@ -6,4 +6,34 @@
     <string name="news">Новости</string>
     <string name="timetable">Расписание</string>
     <string name="profile">Профиль</string>
+
+    <string name="txt_day_mon">Понедельник</string>
+    <string name="txt_day_tes">Вторник</string>
+    <string name="txt_day_wed">Среда</string>
+    <string name="txt_day_thu">Четверг</string>
+    <string name="txt_day_fri">Пятница</string>
+    <string name="txt_day_sat">Суббота</string>
+
+    <string name="txt_type_lesson_lecture">Л</string>
+    <string name="txt_type_lesson_practice">ПР</string>
+    <string name="txt_type_lesson_laboratory_work">ЛР</string>
+
+    <string name="txt_time_1">1 пара (9:30–11:00)</string>
+    <string name="txt_time_2">2 пара (11:10–12:40)</string>
+    <string name="txt_time_3">3 пара (13:00–14:30)</string>
+    <string name="txt_time_4">4 пара (15:00–16:30)</string>
+    <string name="txt_time_5">5 пара (16:40–18:10)</string>
+    <string name="txt_time_6">6 пара (18:30–20:00)</string>
+
+    <string name="txt_lesson_EBCSN">Элементная база вычислительных систем и сетей</string>
+    <string name="txt_lesson_Physics">Физика</string>
+    <string name="txt_lesson_BoP">Основы программирования</string>
+    <string name="txt_lesson_physical_training">Прикладная физическая культура (элективный модуль)</string>
+    <string name="txt_lesson_MTPMS">Математика.Теория вероятностей и математическая статистика</string>
+    <string name="txt_lesson_CG">Компьютерная графика </string>
+    <string name="txt_lesson_ISAT">Информационные системы и технологии</string>
+    <string name="txt_lesson_English">Иностранный язык</string>
+
+    <string name="triangl">Треугольник</string>
+
 </resources>
