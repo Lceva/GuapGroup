@@ -29,7 +29,6 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="140dp"
             android:layout_height="match_parent"
-            android:onClick="onClicktimetable"
             android:text="@string/timetable" />
 
         <Button
@@ -40,16 +39,5 @@
             android:onClick="onClickProfile"
             android:text="@string/profile" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/text_timetable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/timetable"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

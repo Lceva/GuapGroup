@@ -30,8 +30,6 @@ public class ActivityLogin extends AppCompatActivity {
     FirebaseDatabase db;
     DatabaseReference users;
 
-    RelativeLayout root;
-
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +37,6 @@ public class ActivityLogin extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btnSignin = findViewById(R.id.btnSignin);
-        //root = findViewById(R.id.root_element);
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
         users = db.getReference("Users");
