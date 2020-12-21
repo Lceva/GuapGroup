@@ -35,5 +35,9 @@
     <string name="txt_lesson_English">Иностранный язык</string>
 
     <string name="triangl">Треугольник</string>
+    <string name="message">Сообщение</string>
+    <string name="send">send</string>
+    <string name="name">Имя Фамилия</string>
+    <string name="data">01.01</string>
 
 </resources>

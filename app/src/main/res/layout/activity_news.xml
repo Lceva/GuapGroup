@@ -1,54 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityNews">
+    tools:context=".ActivityNews"
+    android:orientation="vertical">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/chat">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/write_message"
+            android:hint="@string/message">
+        </EditText>
+        <ImageButton
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onBtnSendClick"
+            app:srcCompat="@drawable/send">
+
+        </ImageButton>
+    </LinearLayout>
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/buttons_news"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        >
 
         <Button
             android:id="@+id/btn_news"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="139dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:text="@string/news" />
 
         <Button
             android:id="@+id/timetable"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="140dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:onClick="onClicktimetable"
+            android:layout_weight="1"
             android:text="@string/timetable" />
 
         <Button
             android:id="@+id/btn_profil"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="131dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="onClickProfile"
             android:text="@string/profile" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_timetable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/news"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
