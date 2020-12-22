@@ -8,6 +8,47 @@
 
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:ignore="ExtraText"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            app:cardBackgroundColor="#FAF5F8"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginBottom="5sp"
+                android:textSize="24sp"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="@string/email" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:text="@string/exit"
+            android:onClick="onClickExit"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/buttons_news"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,17 +81,6 @@
             android:layout_weight="1"
             android:text="@string/profile" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/text_timetable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile"
-        app:layout_constraintBottom_toTopOf="@+id/buttons_news"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

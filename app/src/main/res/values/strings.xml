@@ -39,5 +39,6 @@
     <string name="send">send</string>
     <string name="name">Имя Фамилия</string>
     <string name="data">01.01</string>
+    <string name="exit">выйти</string>
 
 </resources>

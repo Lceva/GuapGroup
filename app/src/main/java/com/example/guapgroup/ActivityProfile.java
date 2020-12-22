@@ -18,11 +18,21 @@ public class ActivityProfile extends AppCompatActivity {
         Intent intent = new Intent(ActivityProfile.this, ActivityTimetable.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+        finish();
     }
 
     public void onClickNews(View view) {
         Intent intent = new Intent(ActivityProfile.this, ActivityNews.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+        finish();
     }
+
+    public void onClickExit(View view) {
+        Intent i = new Intent(Intent.ACTION_MAIN);
+        i.addCategory(Intent.CATEGORY_HOME);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+    }
+
 }

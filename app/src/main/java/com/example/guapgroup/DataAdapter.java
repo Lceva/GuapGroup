@@ -11,10 +11,10 @@ import java.util.ArrayList;
 
 public class DataAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    ArrayList<String>messages;
+    ArrayList<String> messages;
     LayoutInflater inflater;
 
-    public DataAdapter(Context context,ArrayList<String> messages) {
+    public DataAdapter(Context context, ArrayList<String> messages) {
         this.messages = messages;
         this.inflater = LayoutInflater.from(context);
     }
@@ -34,8 +34,7 @@ public class DataAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public int getItemCount()
-    {
+    public int getItemCount() {
         return messages.size();
     }
 

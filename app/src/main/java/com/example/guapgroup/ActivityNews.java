@@ -29,14 +29,14 @@ import java.util.ArrayList;
 
 public class ActivityNews extends AppCompatActivity {
 
-    private static final int MAX_MESSAGE_LENGHT = 150;
+    private static final int MAX_MESSAGE_LENGHT = 100;
     private RecyclerView chatView;
     private EditText inputMessage;
 
     FirebaseDatabase Db = FirebaseDatabase.getInstance();
     DatabaseReference myRef = Db.getReference("messages");
 
-    ArrayList <String> messages = new ArrayList<>();
+    ArrayList<String> messages = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +54,10 @@ public class ActivityNews extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String msg = inputMessage.getText().toString();
-                if(msg.equals("")){
+                if (msg.equals("")) {
                     return;
                 }
-                if(msg.length() > MAX_MESSAGE_LENGHT){
+                if (msg.length() > MAX_MESSAGE_LENGHT) {
                     return;
                 }
                 myRef.push().setValue(msg);
@@ -99,17 +99,18 @@ public class ActivityNews extends AppCompatActivity {
         });
     }
 
-
     public void onClicktimetable(View view) {
         Intent intent = new Intent(ActivityNews.this, ActivityTimetable.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        finish();
     }
 
     public void onClickProfile(View view) {
         Intent intent = new Intent(ActivityNews.this, ActivityProfile.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        finish();
     }
 
 }

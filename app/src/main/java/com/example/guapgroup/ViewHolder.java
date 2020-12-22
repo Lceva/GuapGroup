@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 public class ViewHolder extends RecyclerView.ViewHolder {
 
     TextView messadge;
-    public ViewHolder( View itemView) {
+    public ViewHolder(View itemView) {
         super(itemView);
-        messadge =itemView.findViewById(R.id.item_mes);
+        messadge = itemView.findViewById(R.id.item_mes);
     }
 }

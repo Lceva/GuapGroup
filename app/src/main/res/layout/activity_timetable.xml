@@ -24,7 +24,7 @@
                 android:id="@+id/monday"
                 style="@style/MyCardViewStyle"
                 android:layout_width="match_parent"
-                app:cardElevation="0dp"
+                app:cardElevation="3dp"
                 tools:ignore="MissingConstraints,TooManyViews">
 
                 <LinearLayout
@@ -97,7 +97,7 @@
                 style="@style/MyCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardElevation="0dp"
+                app:cardElevation="3dp"
                 tools:ignore="MissingConstraints,TooManyViews">
 
 
@@ -429,6 +429,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/wednesday"
                 style="@style/MyCardViewStyle"
+                app:cardElevation="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:ignore="MissingConstraints">
@@ -691,6 +692,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/friday"
                 style="@style/MyCardViewStyle"
+                app:cardElevation="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:accessibilityHeading="true"
@@ -874,6 +876,7 @@
                 style="@style/MyCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:cardElevation="3dp"
                 tools:ignore="MissingConstraints,TooManyViews">
 
                 <LinearLayout
