@@ -25,10 +25,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class ActivityLogin extends AppCompatActivity {
+    private static String str_email;
+    private static String str_password;
     Button btnSignin;
     FirebaseDatabase db;
     DatabaseReference users;
-    private FirebaseAuth mAuth;
+    public FirebaseAuth mAuth;
     public FirebaseUser user;
 
     @SuppressLint("WrongViewCast")
@@ -84,8 +86,10 @@ public class ActivityLogin extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult> () {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                user = mAuth.getCurrentUser();
+                                str_email = email.getText().toString();
+                                str_password = password.getText().toString();
                                 SaveStatus(user);
+                                user = mAuth.getCurrentUser();
                                 Intent intent = new Intent(ActivityLogin.this, ActivityTimetable.class);
                                 startActivity(intent);
                                 finish();
@@ -100,6 +104,15 @@ public class ActivityLogin extends AppCompatActivity {
         });
 
         dialog.show();
+    }
+
+
+    public static String setEmail(){
+        return str_email;
+    }
+
+    public static String setPassword(){
+        return str_password;
     }
 
     public void onStart() {

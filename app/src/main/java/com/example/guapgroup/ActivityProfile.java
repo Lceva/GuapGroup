@@ -5,13 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class ActivityProfile extends AppCompatActivity {
+
+    String str_email = ActivityLogin.setEmail();
+    String str_password = ActivityLogin.setPassword();
+    boolean  F = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        TextView email =(TextView) findViewById(R.id.email_txt);
+        TextView password =(TextView) findViewById(R.id.password_txt);
+        email.setText(str_email);
+        password.setText(str_password);
     }
 
     public void onClicktimetable(View view) {
@@ -35,4 +44,20 @@ public class ActivityProfile extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void onClickSowPassword(View view) {
+        TextView password =(TextView) findViewById(R.id.password_txt);
+
+        if(F){
+            password.setVisibility(View.VISIBLE);
+        }else {
+            password.setVisibility(View.INVISIBLE);
+        }
+
+        if (F){
+            F=false;
+        }else {
+            F = true;
+        }
+
+    }
 }
