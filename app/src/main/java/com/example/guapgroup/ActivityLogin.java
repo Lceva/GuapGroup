@@ -25,8 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class ActivityLogin extends AppCompatActivity {
-    private static String str_email;
-    private static String str_password;
     Button btnSignin;
     FirebaseDatabase db;
     DatabaseReference users;
@@ -86,10 +84,8 @@ public class ActivityLogin extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult> () {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                str_email = email.getText().toString();
-                                str_password = password.getText().toString();
-                                SaveStatus(user);
                                 user = mAuth.getCurrentUser();
+                                SaveStatus(user);
                                 Intent intent = new Intent(ActivityLogin.this, ActivityTimetable.class);
                                 startActivity(intent);
                                 finish();
@@ -107,17 +103,8 @@ public class ActivityLogin extends AppCompatActivity {
     }
 
 
-    public static String setEmail(){
-        return str_email;
-    }
-
-    public static String setPassword(){
-        return str_password;
-    }
-
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         Status(currentUser);
     }
@@ -128,12 +115,10 @@ public class ActivityLogin extends AppCompatActivity {
         ed.commit();
     }
 
-    private void Status(FirebaseUser user) {
+    void Status(FirebaseUser user) {
         if (user != null) {
             Intent intent = new Intent(ActivityLogin.this, ActivityTimetable.class);
             startActivity(intent);
-        } else {
-            btnSignin.setVisibility(View.VISIBLE);
         }
     }
 

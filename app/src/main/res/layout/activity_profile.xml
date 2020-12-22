@@ -11,6 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_news"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
@@ -39,65 +43,13 @@
                 android:text="@string/email"
                 android:textSize="24sp" />
         </androidx.cardview.widget.CardView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="399dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="5sp"
-                android:layout_marginTop="5sp"
-                android:layout_marginRight="5sp"
-                android:layout_marginBottom="5sp"
-                android:layout_weight="1"
-
-                app:cardBackgroundColor="#FAF5F8"
-                app:cardElevation="3dp"
-                tools:ignore="ExtraText">
-
-                <TextView
-                    android:id="@+id/password_txt"
-                    android:layout_width="296dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5sp"
-                    android:layout_marginTop="5sp"
-                    android:layout_marginRight="5sp"
-                    android:layout_marginBottom="5sp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/comfortaa_bold"
-                    android:text="@string/password"
-                    android:textSize="24sp"
-                    android:visibility="invisible"
-                    />
-
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/show_password"
-                android:layout_width="100dp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginTop="10sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginBottom="10sp"
-                android:layout_height="match_parent"
-                android:onClick="onClickSowPassword"
-                android:text="@string/show_password"
-                android:textSize="11sp"
-                tools:ignore="SmallSp" />
-
-
-        </LinearLayout>
-
-
 
         <Button
             android:id="@+id/exit"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:onClick="onClickExit"
             android:layout_gravity="center"
+            android:onClick="onClickExit"
             android:text="@string/exit"
             android:textAlignment="center" />
 

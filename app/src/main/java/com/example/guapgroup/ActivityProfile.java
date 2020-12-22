@@ -7,10 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class ActivityProfile extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 
-    String str_email = ActivityLogin.setEmail();
-    String str_password = ActivityLogin.setPassword();
+public class ActivityProfile extends AppCompatActivity {
+    
+    FirebaseAuth mAuth =FirebaseAuth.getInstance();;
+    FirebaseUser user = mAuth.getCurrentUser();
     boolean  F = true;
 
     @Override
@@ -19,8 +23,8 @@ public class ActivityProfile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         TextView email =(TextView) findViewById(R.id.email_txt);
         TextView password =(TextView) findViewById(R.id.password_txt);
-        email.setText(str_email);
-        password.setText(str_password);
+
+        email.setText(user.getEmail());
     }
 
     public void onClicktimetable(View view) {
@@ -38,26 +42,10 @@ public class ActivityProfile extends AppCompatActivity {
     }
 
     public void onClickExit(View view) {
-        Intent i = new Intent(Intent.ACTION_MAIN);
-        i.addCategory(Intent.CATEGORY_HOME);
-        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(i);
-    }
-
-    public void onClickSowPassword(View view) {
-        TextView password =(TextView) findViewById(R.id.password_txt);
-
-        if(F){
-            password.setVisibility(View.VISIBLE);
-        }else {
-            password.setVisibility(View.INVISIBLE);
-        }
-
-        if (F){
-            F=false;
-        }else {
-            F = true;
-        }
-
+        mAuth.signOut();
+        user = null;
+        Intent intent = new Intent(ActivityProfile.this, ActivityLogin.class);
+        startActivity(intent);
+        finish();
     }
 }
