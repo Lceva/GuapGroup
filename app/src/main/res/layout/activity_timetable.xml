@@ -7,15 +7,13 @@
     tools:context=".ActivityTimetable">
 
 
+
     <ScrollView
-        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="620dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttons_news"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +23,9 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/monday"
                 style="@style/MyCardViewStyle"
-                tools:ignore="MissingConstraints">
+                android:layout_width="match_parent"
+                app:cardElevation="0dp"
+                tools:ignore="MissingConstraints,TooManyViews">
 
                 <LinearLayout
                     android:id="@+id/list_lessons_mon"
@@ -37,17 +37,26 @@
                         android:id="@+id/day_mon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_day_mon" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_day_mon"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/purple_700"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/time_mon_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_4" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_4"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="53dp"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -59,17 +68,25 @@
 
                         <TextView
                             android:id="@+id/type_lesson_mon"
-                            android:layout_width="wrap_content"
+                            android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_lecture" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_lecture"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_mon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="330dp"
+                            android:layout_height="53dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_EBCSN" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_EBCSN"
+                            android:textAlignment="center"
+                            android:typeface="sans" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -79,8 +96,9 @@
                 android:id="@+id/tuesday"
                 style="@style/MyCardViewStyle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints">
+                android:layout_height="match_parent"
+                app:cardElevation="0dp"
+                tools:ignore="MissingConstraints,TooManyViews">
 
 
                 <LinearLayout
@@ -94,13 +112,22 @@
                         android:id="@+id/day_tes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_day_tes" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_day_tes"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/purple_700"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/time_tes_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_2" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -109,24 +136,30 @@
 
                         <ImageView
                             android:id="@+id/image_tes_1_up"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:contentDescription="@string/triangl"
                             android:src="@drawable/triangl_up" />
 
                         <TextView
                             android:id="@+id/type_lesson_tes_1_up"
-                            android:layout_width="wrap_content"
+                            android:layout_width="79dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_laboratory_work" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_laboratory_work"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_tes_1_up"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="42dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_EBCSN" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_EBCSN"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -143,24 +176,35 @@
 
                         <TextView
                             android:id="@+id/type_lesson_tes_1_down"
-                            android:layout_width="wrap_content"
+                            android:layout_width="61dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_practice" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_practice"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_tes_1_down"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="362dp"
+                            android:layout_height="49dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_EBCSN" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_EBCSN"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_tes_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_3" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_3"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -169,24 +213,34 @@
 
                         <TextView
                             android:id="@+id/type_lesson_tes_2"
-                            android:layout_width="wrap_content"
+                            android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_lecture" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_lecture"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_tes_2"
                             android:layout_width="350dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_ISAT" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_ISAT"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_tes_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_4" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_4"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -195,24 +249,35 @@
 
                         <TextView
                             android:id="@+id/type_lesson_tes_3"
-                            android:layout_width="wrap_content"
+                            android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_lecture" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_lecture"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_tes_3"
                             android:layout_width="350dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_CG" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_CG"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_tes_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_5" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_5"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
 
                     <LinearLayout
@@ -229,23 +294,39 @@
 
                         <TextView
                             android:id="@+id/type_lesson_tes_4_up"
-                            android:layout_width="wrap_content"
+                            android:layout_width="45dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_laboratory_work" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_laboratory_work"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_tes_4_up"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_ISAT" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_ISAT"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/time_tes_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_time_6"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
 
                         <ImageView
                             android:id="@+id/image_tes_4_down"
@@ -259,25 +340,23 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_practice" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_type_lesson_practice"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/lesson_tes_4_down"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:fontFamily="@font/comfortaa"
                             android:text="@string/txt_lesson_ISAT" />
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/time_tes_5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/txt_time_6" />
-
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -290,17 +369,23 @@
 
                         <TextView
                             android:id="@+id/type_lesson_tes_5_up"
-                            android:layout_width="wrap_content"
+                            android:layout_width="39dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_laboratory_work" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_laboratory_work"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_tes_5_up"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="310dp"
+                            android:layout_height="41dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_CG" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_CG"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -317,17 +402,23 @@
 
                         <TextView
                             android:id="@+id/type_lesson_tes_5_down"
-                            android:layout_width="wrap_content"
+                            android:layout_width="49dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_laboratory_work" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_laboratory_work"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_tes_5_down"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="51dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_ISAT" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_ISAT"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
 
@@ -353,13 +444,21 @@
                         android:id="@+id/day_wed"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_day_wed" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_day_wed"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/purple_700"
+                        android:textSize="25sp" />
 
                     <TextView
                         android:id="@+id/time_wed_1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_1" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -368,28 +467,37 @@
 
                         <TextView
                             android:id="@+id/type_lesson_wed_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="38dp"
+                            android:layout_height="43dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_practice" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_practice"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_wed_1"
                             android:layout_width="350dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="43dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_physical_training" />
+                            android:text="@string/txt_lesson_physical_training"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_wed_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_2" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -402,17 +510,23 @@
 
                         <TextView
                             android:id="@+id/type_lesson_wed_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="35dp"
+                            android:layout_height="25dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_laboratory_work" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_laboratory_work"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_wed_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="307dp"
+                            android:layout_height="25dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_Physics" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_Physics"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
 
@@ -420,11 +534,15 @@
                         android:id="@+id/time_wed_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_3" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_3"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -437,21 +555,27 @@
 
                         <TextView
                             android:id="@+id/type_lesson_wed_3_up"
-                            android:layout_width="wrap_content"
+                            android:layout_width="36dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_lecture" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_lecture"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_wed_3_up"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="321dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_MTPMS" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_MTPMS"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -464,28 +588,38 @@
 
                         <TextView
                             android:id="@+id/type_lesson_wed_3_down"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="41dp"
+                            android:layout_height="25dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_lecture" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_lecture"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_wed_3_down"
-                            android:layout_width="wrap_content"
+                            android:layout_width="325dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_Physics" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_Physics"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_wed_4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/txt_time_4" />
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_4"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -497,17 +631,23 @@
 
                         <TextView
                             android:id="@+id/type_lesson_wed_4_up"
-                            android:layout_width="wrap_content"
+                            android:layout_width="61dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_practice" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_practice"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_wed_4_up"
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="348dp"
+                            android:layout_height="38dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_Physics" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_Physics"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -524,17 +664,24 @@
 
                         <TextView
                             android:id="@+id/type_lesson_wed_4_down"
-                            android:layout_width="wrap_content"
+                            android:layout_width="96dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_lecture" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_lecture"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
 
                         <TextView
                             android:id="@+id/lesson_wed_4_down"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_Physics" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_Physics"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -546,6 +693,7 @@
                 style="@style/MyCardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:accessibilityHeading="true"
                 tools:ignore="MissingConstraints,TooManyViews">
 
                 <LinearLayout
@@ -558,14 +706,22 @@
                         android:id="@+id/day_fri"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_bold"
                         android:text="@string/txt_day_fri"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/purple_700"
+                        android:textSize="25sp"
                         tools:ignore="TooManyViews" />
 
                     <TextView
                         android:id="@+id/time_fri_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/txt_time_1" />
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -577,21 +733,31 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_laboratory_work" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_laboratory_work"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_fri_1"
                             android:layout_width="350dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_BoP" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_BoP"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_fri_2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_2" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -603,21 +769,31 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_practice" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_practice"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_fri_2"
                             android:layout_width="350dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_physical_training" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_physical_training"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_fri_3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_3" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_3"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -633,24 +809,34 @@
 
                         <TextView
                             android:id="@+id/type_lesson_fri_3"
-                            android:layout_width="wrap_content"
+                            android:layout_width="62dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_lecture" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_lecture"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_fri_3"
                             android:layout_width="350dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_BoP" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_BoP"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_fri_4"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_4" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_4"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -663,14 +849,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_practice" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_practice"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_fri_4"
                             android:layout_width="350dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_English" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_English"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -694,14 +886,22 @@
                         android:id="@+id/day_sat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_bold"
                         android:text="@string/txt_day_sat"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/purple_700"
+                        android:textSize="25sp"
                         tools:ignore="TooManyViews" />
 
                     <TextView
                         android:id="@+id/time_sat_1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_1" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -717,24 +917,34 @@
 
                         <TextView
                             android:id="@+id/type_lesson_sat_1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="60dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_practice" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_practice"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_sat_1"
                             android:layout_width="350dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_MTPMS" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_MTPMS"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/time_sat_2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txt_time_2" />
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="@string/txt_time_2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -750,17 +960,23 @@
 
                         <TextView
                             android:id="@+id/type_lesson_sat_2"
-                            android:layout_width="wrap_content"
+                            android:layout_width="52dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/txt_type_lesson_lecture" />
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="@string/txt_type_lesson_lecture"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/lesson_sat_2"
                             android:layout_width="350dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="48dp"
                             android:layout_weight="1"
-                            android:text="@string/txt_lesson_MTPMS" />
+                            android:fontFamily="@font/comfortaa"
+                            android:text="@string/txt_lesson_MTPMS"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -768,7 +984,6 @@
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
-
 
     </ScrollView>
 

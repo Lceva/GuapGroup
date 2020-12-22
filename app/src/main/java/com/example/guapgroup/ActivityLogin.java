@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
@@ -25,9 +27,10 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 public class ActivityLogin extends AppCompatActivity {
 
     Button btnSignin;
-    FirebaseAuth auth;
+    private FirebaseAuth mAuth;
     FirebaseDatabase db;
     DatabaseReference users;
+    SharedPreferences sPref;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -36,16 +39,18 @@ public class ActivityLogin extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btnSignin = findViewById(R.id.btnSignin);
-        auth = FirebaseAuth.getInstance();
+        mAuth= FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
         users = db.getReference("Users");
 
+        onStart();
         btnSignin.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
                 showSigninWindow();
             }
         });
+
 
     }
     private void showSigninWindow() {
@@ -78,10 +83,11 @@ public class ActivityLogin extends AppCompatActivity {
                     Toast.makeText(ActivityLogin.this, "Ведите коректный пороль", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                auth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener < AuthResult > () {
                             @Override
                             public void onSuccess(AuthResult authResult) {
+                                FirebaseUser user = mAuth.getCurrentUser();
                                 Intent intent = new Intent(ActivityLogin.this, ActivityTimetable.class);
                                 startActivity(intent);
                                 finish();
@@ -95,5 +101,29 @@ public class ActivityLogin extends AppCompatActivity {
             }
         });
         dialog.show();
+    }
+    private void savestatus(FirebaseUser user) {
+        sPref = getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor ed = sPref.edit();
+        ed.commit();
+    }
+
+    private void Status(FirebaseUser user) {
+        if (user != null){
+            Intent intent = new Intent(ActivityLogin.this, ActivityTimetable.class);
+            startActivity(intent);
+
+        }
+        else {
+            btnSignin.setVisibility(View.VISIBLE);
+        }
+    }
+
+
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        Status(currentUser);
     }
 }
