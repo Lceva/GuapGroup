@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
 public class ActivityProfile extends AppCompatActivity {
-    
+
     FirebaseAuth mAuth =FirebaseAuth.getInstance();;
     FirebaseUser user = mAuth.getCurrentUser();
     boolean  F = true;
@@ -22,8 +22,6 @@ public class ActivityProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         TextView email =(TextView) findViewById(R.id.email_txt);
-        TextView password =(TextView) findViewById(R.id.password_txt);
-
         email.setText(user.getEmail());
     }
 
