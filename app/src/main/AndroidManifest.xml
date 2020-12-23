@@ -9,9 +9,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.GuapGroup">
-        <activity android:name=".ActivityProfile"/>
-        <activity android:name=".ActivityNews" />
-        <activity android:name=".ActivityTimetable" />
+        <activity android:name=".ActivityProfile"
+            android:label="@string/profile"
+            android:theme="@style/text"/>
+        <activity android:name=".ActivityNews"
+            android:label="@string/news"
+            android:theme="@style/text"/>
+        <activity android:name=".ActivityTimetable"
+            android:label="@string/timetable"
+            android:theme="@style/text"/>
         <activity
             android:name=".ActivityLogin"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

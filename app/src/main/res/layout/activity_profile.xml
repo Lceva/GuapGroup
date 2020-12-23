@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityProfile">
+    tools:context=".ActivityProfile"
+    android:background="@drawable/bagraund">
 
 
     <LinearLayout
@@ -19,7 +20,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="399dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_marginLeft="5sp"
             android:layout_marginTop="5sp"
@@ -51,6 +52,10 @@
             android:layout_gravity="center"
             android:onClick="onClickExit"
             android:text="@string/exit"
+            android:textSize="20dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
             android:textAlignment="center" />
 
     </LinearLayout>
@@ -68,8 +73,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/purple_700"
+            android:fontFamily="@font/comfortaa_bold"
             android:onClick="onClickNews"
-            android:text="@string/news" />
+            android:text="@string/news"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/timetable"
@@ -77,8 +85,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/purple_700"
+            android:fontFamily="@font/comfortaa_bold"
             android:onClick="onClicktimetable"
-            android:text="@string/timetable" />
+            android:text="@string/timetable"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn_profil"
@@ -86,7 +97,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/profile" />
+            android:background="@color/purple_700"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/profile"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 

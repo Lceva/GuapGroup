@@ -11,6 +11,7 @@
         <item name="contentPaddingLeft">16dp</item>
         <item name="contentPaddingRight">16dp</item>
         <item name="cardBackgroundColor">@color/white</item>
+        <item name="android:background">@drawable/bagraund</item>
     </style>
 
 </resources>

@@ -9,7 +9,7 @@
     android:layout_marginTop="5sp"
     android:layout_marginRight="5sp"
     android:layout_marginBottom="5sp"
-    app:cardBackgroundColor="#FAF5F8"
+    app:cardBackgroundColor="#7B68EE"
     app:cardElevation="3dp">
 
     <TextView
@@ -17,11 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:textColor="@color/white"
         android:layout_marginLeft="5sp"
         android:layout_marginTop="5sp"
         android:layout_marginRight="5sp"
         android:layout_marginBottom="5sp"
         android:text="@string/message"
-        android:textSize="24sp"
+        android:textSize="14sp"
         android:fontFamily="@font/comfortaa_bold"/>
 </androidx.cardview.widget.CardView>

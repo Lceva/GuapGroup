@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityTimetable">
+    tools:context=".ActivityTimetable"
+    >
 
 
 
@@ -24,8 +25,7 @@
                 android:id="@+id/monday"
                 style="@style/MyCardViewStyle"
                 android:layout_width="match_parent"
-                app:cardElevation="3dp"
-                tools:ignore="MissingConstraints,TooManyViews">
+                app:cardElevation="3dp">
 
                 <LinearLayout
                     android:id="@+id/list_lessons_mon"
@@ -1003,8 +1003,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/purple_700"
+            android:fontFamily="@font/comfortaa_bold"
             android:onClick="onClickNews"
-            android:text="@string/news" />
+            android:text="@string/news"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/timetable"
@@ -1012,7 +1015,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/timetable" />
+            android:background="@color/purple_700"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/timetable"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn_profil"
@@ -1020,8 +1026,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/purple_700"
+            android:fontFamily="@font/comfortaa_bold"
             android:onClick="onClickProfile"
-            android:text="@string/profile" />
+            android:text="@string/profile"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
